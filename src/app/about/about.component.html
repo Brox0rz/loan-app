@@ -2,55 +2,22 @@
  * Title: about.component.html
  * Authors: Professor Richard Krasso and Brock Hemsouvanh
  * Date Created: 05/10/2024
- * Modified: 5/17/2024
+ * Modified: 5/19/2024
  * Description: About page for providing information about the Loan App.
 -->
-<h1>About Loan App</h1>
-<p>
-  Loan App is a free-to-use online loan calculator. We specialize in estimating your
-  monthly payment and how much interest will be paid through the term of the loan.
-  <br/><br/>
-  Loan App was created by a team of passionate financial experts who wanted to provide
-  an easy and accurate way to help people manage their loans. We believe everyone
-  deserves the best financial advice and tools to help make informed decisions about their
-  financial future.
-</p>
-<!--
- * Title: about-us.component.html
- * Author: Brock Hemsouvanh and Professor Richard Krasso
- * Date: 5/17/2024
- * Description: HTML template for the About Us component of the Loan App application.
- *              This template uses Angular Flex Layout to arrange content in a responsive design.
--->
 
-<!-- The main container with row wrap layout for responsive behavior -->
-<div fxLayout="row wrap">
-
-  <!-- Flexible box to contain company information and background -->
-  <div fxFlex>
-
-    <!-- Vertical layout for image and a brief caption -->
-    <div fxLayout="column">
-      <div>
-        <img src="./assets/loan-app-logo.jpg" alt="Loan App Logo" />
-      </div>
-
-      <div>
-        <em>
-          Loan App
-        </em>
-      </div>
-    </div>
-
-    <!-- Flexible box for the company's title and additional information -->
-    <div fxFlex>
-      <h1 class="blue">About Loan App</h1>
-      <p>
-        Loan App was created by a team of passionate financial experts who wanted to provide
-        an easy and accurate way to help people manage their loans. We believe everyone
-        deserves the best financial advice and tools to help make informed decisions about their
-        financial future.
-      </p>
-    </div>
+<div fxLayout="row wrap" fxLayoutGap="20px" class="home-container">
+  <div fxFlex="90" class="loan-form">
+    <mat-card class="about-card">
+      <mat-card-title style="color: var(--ravenclaw-secondary);">About The Loan App Team</mat-card-title>
+      <mat-card-content>
+        <p>
+          Loan App was created by a team of passionate financial experts who wanted to provide
+          an easy and accurate way to help people manage their loans. We believe everyone
+          deserves the best financial advice and tools to help make informed decisions about their
+          financial future.
+        </p>
+      </mat-card-content>
+    </mat-card>
   </div>
 </div>

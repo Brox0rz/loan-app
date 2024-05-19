@@ -2,54 +2,40 @@
  * Title: contact-us.component.html
  * Authors: Professor Richard Krasso and Brock Hemsouvanh
  * Date Created: 05/10/2024
- * Modified: 05/17/2024
+ * Modified: 05/19/2024
  * Description: Contact Us page for providing company contact information.
 -->
 
 <!-- Main flex container with row wrap for responsiveness -->
-<div fxLayout="row wrap">
-
+<div fxLayout="row wrap" fxLayoutGap="20px" class="contact-container">
   <!-- Flex item for address information within a material card -->
-  <div fxFlex>
-    <mat-card class="mat-eleveation-z0">
+  <div fxFlex="40">
+    <mat-card class="contact-card">
       <!-- Card title with an icon -->
-      <mat-card-title class="card-title-icon">
-        <mat-icon color="primary">navigation</mat-icon>
+      <mat-card-title class="card-title-icon" style="color: var(--ravenclaw-secondary); text-align: center;">
+        <mat-icon color="secondary">navigation</mat-icon>
       </mat-card-title>
-
       <br />
-
       <!-- Card content for address, styled to center text -->
-      <mat-card-content class="align-center">
-        <p>
-          123 Finance Avenue
-        </p>
+      <mat-card-content class="align-center" style="text-align: center;">
+        <p>123 Finance Avenue</p>
         <p>Money Town, Wealthy State</p>
         <br />
       </mat-card-content>
     </mat-card>
   </div>
-
   <!-- Flex item for contact numbers within a material card -->
-  <div fxFlex>
-    <mat-card class="mat-eleveation-z0">
-      <mat-card-title class="card-title-icon">
-        <mat-icon color="primary">phone</mat-icon>
+  <div fxFlex="40">
+    <mat-card class="contact-card">
+      <mat-card-title class="card-title-icon" style="color: var(--ravenclaw-secondary); text-align: center;">
+        <mat-icon color="secondary">phone</mat-icon>
       </mat-card-title>
-
       <br />
-
       <!-- Card content for phone numbers, styled to center text -->
-      <mat-card-content class="align-center">
-        <p>
-          Direct: 123-456-7890
-        </p>
-        <p>
-          Toll-free: 1-800-123-4567
-        </p>
-        <p>
-          Fax: 987-654-3210
-        </p>
+      <mat-card-content class="align-center" style="text-align: center;">
+        <p>Direct: 123-456-7890</p>
+        <p>Toll-free: 1-800-123-4567</p>
+        <p>Fax: 987-654-3210</p>
       </mat-card-content>
     </mat-card>
   </div>
@@ -59,7 +45,7 @@
 
 <!-- Footer text centered, contained within a flex layout column -->
 <div fxLayout="column">
-  <p style="text-align: center">
+  <p style="text-align: center; color: var(--ravenclaw-secondary);">
     Visit us online or at one of our many great locations throughout the country!
   </p>
 </div>

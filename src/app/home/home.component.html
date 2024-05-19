@@ -6,11 +6,13 @@
   Description: Home component template for Loan App, containing the loan entry form, calculation results, and interest display.
 -->
 
-<div fxLayout="row wrap" fxLayoutGap="20px" class="home-container" style="margin-top: 20px;">
+<div fxLayout="row wrap" fxLayoutGap="20px" class="home-container">
   <!-- Loan entry form card -->
   <div fxFlex="90" class="loan-form">
     <mat-card>
-      <mat-card-title>Welcome to the Loan Application!</mat-card-title>
+      <mat-card-title style="color: var(--ravenclaw-secondary); text-align: center;">
+        Welcome to the Loan Application!
+      </mat-card-title>
       <mat-card-content fxLayout="row" fxLayoutGap="20px">
         <!-- Form Section -->
         <form fxFlex="50" fxLayout="column" fxLayoutGap="20px">
@@ -30,14 +32,14 @@
             <input matInput id="txtYears" [(ngModel)]="loanDetails.years" name="txtYears" type="number">
           </mat-form-field>
           <!-- Calculate button -->
-          <button mat-raised-button color="primary" (click)="calculateLoan()">Calculate</button>
+          <button mat-raised-button class="calculate-button" (click)="calculateLoan()">Calculate</button>
         </form>
 
         <!-- Results Section -->
         <div fxFlex="50" fxLayout="column" fxLayoutGap="20px" class="loan-results">
           <!-- Monthly Payment Card -->
-          <mat-card class="mat-elevation-z8">
-            <mat-card-title style="text-align: center;">
+          <mat-card class="result-card">
+            <mat-card-title style="text-align: center; color: var(--ravenclaw-secondary);">
               Your Monthly Payment
             </mat-card-title>
             <mat-card-content style="text-align: center; font-size: 48px;">
@@ -45,8 +47,8 @@
             </mat-card-content>
           </mat-card>
           <!-- Total Interest Paid Card -->
-          <mat-card class="mat-elevation-z8">
-            <mat-card-title style="text-align: center;">
+          <mat-card class="result-card">
+            <mat-card-title style="text-align: center; color: var(--ravenclaw-secondary);">
               Total Interest Paid
             </mat-card-title>
             <mat-card-content style="text-align: center; font-size: 48px;">
