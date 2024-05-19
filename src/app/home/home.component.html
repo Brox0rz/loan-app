@@ -1,0 +1,60 @@
+<!--
+  Title: home.component.html
+  Authors: Professor Richard Krasso and Brock Hemsouvanh
+  Date: 05/17/2024
+  Modified by Brock Hemsouvanh: 5/18/2024
+  Description: Home component template for Loan App, containing the loan entry form, calculation results, and interest display.
+-->
+
+<div fxLayout="row wrap" fxLayoutGap="20px" class="home-container" style="margin-top: 20px;">
+  <!-- Loan entry form card -->
+  <div fxFlex="90" class="loan-form">
+    <mat-card>
+      <mat-card-title>Welcome to the Loan Application!</mat-card-title>
+      <mat-card-content fxLayout="row" fxLayoutGap="20px">
+        <!-- Form Section -->
+        <form fxFlex="50" fxLayout="column" fxLayoutGap="20px">
+          <!-- Input for Loan Amount -->
+          <mat-form-field appearance="fill">
+            <mat-label>Loan Amount</mat-label>
+            <input matInput id="txtLoanAmount" [(ngModel)]="loanDetails.amount" name="txtLoanAmount" type="number">
+          </mat-form-field>
+          <!-- Input for Interest Rate -->
+          <mat-form-field appearance="fill">
+            <mat-label>Interest Rate (%)</mat-label>
+            <input matInput id="txtInterestRate" [(ngModel)]="loanDetails.interestRate" name="txtInterestRate" type="number" step="0.01">
+          </mat-form-field>
+          <!-- Input for Number of Years -->
+          <mat-form-field appearance="fill">
+            <mat-label>Number of Years</mat-label>
+            <input matInput id="txtYears" [(ngModel)]="loanDetails.years" name="txtYears" type="number">
+          </mat-form-field>
+          <!-- Calculate button -->
+          <button mat-raised-button color="primary" (click)="calculateLoan()">Calculate</button>
+        </form>
+
+        <!-- Results Section -->
+        <div fxFlex="50" fxLayout="column" fxLayoutGap="20px" class="loan-results">
+          <!-- Monthly Payment Card -->
+          <mat-card class="mat-elevation-z8">
+            <mat-card-title style="text-align: center;">
+              Your Monthly Payment
+            </mat-card-title>
+            <mat-card-content style="text-align: center; font-size: 48px;">
+              {{ monthlyPayment | currency }}
+            </mat-card-content>
+          </mat-card>
+          <!-- Total Interest Paid Card -->
+          <mat-card class="mat-elevation-z8">
+            <mat-card-title style="text-align: center;">
+              Total Interest Paid
+            </mat-card-title>
+            <mat-card-content style="text-align: center; font-size: 48px;">
+              {{ totalInterest | currency }}
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

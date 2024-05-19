@@ -1,0 +1,90 @@
+/* Title: styles.scss
+ * Authors: Professor Richard Krasso and Brock Hemsouvanh
+ * Date Created: 5/12/2024
+ * Modified by Brock Hemsouvanh: 05/18/2024
+ * Description: Global styles for the Loan App with a Ravenclaw theme.
+ */
+
+ @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+ @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+ @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+ @import "~@angular/material/prebuilt-themes/purple-green.css";
+
+ // Ravenclaw theme colors
+ :root {
+   --ravenclaw-primary: #0e1a40;  // A dark blue representing Ravenclaw's primary house color
+   --ravenclaw-secondary: #946b2d;  // A bronze color reflecting Ravenclaw's secondary color
+   --ravenclaw-accent: #c0c0c0;  // Silver for accents and highlights
+ }
+
+ // General body styling
+ body {
+   font-family: 'Merriweather', serif; // Elegant typeface for a scholarly look
+   color: var(--ravenclaw-primary);
+   background-color: #2e2e2e; // Dark grey background for the entire page
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ // Global link styling
+ a {
+   color: var(--ravenclaw-accent);
+   text-decoration: none; // Removes underline from all links
+
+   &:hover {
+     color: var(--ravenclaw-secondary);
+     text-decoration: underline; // Underline on hover for better interaction visibility
+   }
+ }
+
+ // Navigation styling
+ .toolbar {
+   background-color: var(--ravenclaw-primary) !important;
+   color: var(--ravenclaw-accent);
+ }
+
+ nav {
+   background-color: var(--ravenclaw-primary);
+   padding: 10px 0;
+   text-align: center;
+
+   ul {
+     list-style: none;
+     margin: 0 auto;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+   }
+
+   li {
+     display: inline;
+   }
+
+   a {
+     font-weight: bold;
+     color: var(--ravenclaw-accent);
+     &:hover {
+       text-decoration: underline;
+     }
+   }
+ }
+
+ // Container for main content area, providing padding and layout consistency
+ .main-container {
+   padding: 20px;
+   background-color: white;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ }
+
+ // Styling for the home component container
+ .home-container {
+   padding: 20px;
+   background-color: #2e2e2e; // Dark grey background for the entire page
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+ }

@@ -1,0 +1,25 @@
+<!--
+ * Title: base-layout.component.html
+ * Authors: Professor Richard Krasso and Brock Hemsouvanh
+ * Date Created: 05/10/2024
+ * Modified by Brock Hemsouvanh: 5/18/2024
+ * Description: Template for the base layout component providing consistent navigation.
+-->
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row>
+    <div class="logo">
+      <img src="./assets/loan-app-logo.jpg" height="80" alt="Loan App Logo" />
+    </div>
+    <div style="width: 80%">
+      <div fxLayout="row wrap" fxLayoutAlign="end start">
+        <button mat-button routerLink="/loan-calculator">Loan Calculator</button>
+        <button mat-button routerLink="/about">About Us</button>
+        <button mat-button routerLink="/contact-us">Contact Us</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<router-outlet></router-outlet>
