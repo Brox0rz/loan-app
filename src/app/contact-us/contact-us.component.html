@@ -6,46 +6,54 @@
  * Description: Contact Us page for providing company contact information.
 -->
 
-<!-- Main flex container with row wrap for responsiveness -->
-<div fxLayout="row wrap" fxLayoutGap="20px" class="contact-container">
-  <!-- Flex item for address information within a material card -->
-  <div fxFlex="40">
-    <mat-card class="contact-card">
-      <!-- Card title with an icon -->
-      <mat-card-title class="card-title-icon" style="color: var(--ravenclaw-secondary); text-align: center;">
-        <mat-icon color="secondary">navigation</mat-icon>
-      </mat-card-title>
-      <br />
-      <!-- Card content for address, styled to center text -->
-      <mat-card-content class="align-center" style="text-align: center;">
-        <p>123 Finance Avenue</p>
-        <p>Money Town, Wealthy State</p>
+<!-- Main container with a title -->
+<div class="home-container">
+  <!-- Page title -->
+  <h1 style="color: var(--ravenclaw-secondary); font-weight: bold; text-align: center;">
+    Contact Us!
+  </h1>
+
+  <!-- Main flex container with row wrap for responsiveness -->
+  <div fxLayout="row wrap" fxLayoutGap="20px" class="contact-container">
+    <!-- Flex item for address information within a material card -->
+    <div fxFlex="40">
+      <mat-card class="contact-card">
+        <!-- Card title with an icon -->
+        <mat-card-title class="card-title-icon" style="color: var(--ravenclaw-secondary); text-align: center;">
+          <mat-icon color="secondary">navigation</mat-icon>
+        </mat-card-title>
         <br />
-      </mat-card-content>
-    </mat-card>
+        <!-- Card content for address, styled to center text -->
+        <mat-card-content class="align-center" style="text-align: center;">
+          <p>123 Finance Avenue</p>
+          <p>Money Town, Wealthy State</p>
+          <br />
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <!-- Flex item for contact numbers within a material card -->
+    <div fxFlex="40">
+      <mat-card class="contact-card">
+        <mat-card-title class="card-title-icon" style="color: var(--ravenclaw-secondary); text-align: center;">
+          <mat-icon color="secondary">phone</mat-icon>
+        </mat-card-title>
+        <br />
+        <!-- Card content for phone numbers, styled to center text -->
+        <mat-card-content class="align-center" style="text-align: center;">
+          <p>Direct: 123-456-7890</p>
+          <p>Toll-free: 1-800-123-4567</p>
+          <p>Fax: 987-654-3210</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
-  <!-- Flex item for contact numbers within a material card -->
-  <div fxFlex="40">
-    <mat-card class="contact-card">
-      <mat-card-title class="card-title-icon" style="color: var(--ravenclaw-secondary); text-align: center;">
-        <mat-icon color="secondary">phone</mat-icon>
-      </mat-card-title>
-      <br />
-      <!-- Card content for phone numbers, styled to center text -->
-      <mat-card-content class="align-center" style="text-align: center;">
-        <p>Direct: 123-456-7890</p>
-        <p>Toll-free: 1-800-123-4567</p>
-        <p>Fax: 987-654-3210</p>
-      </mat-card-content>
-    </mat-card>
+
+  <br /><br /><br /><br />
+
+  <!-- Footer text centered, contained within a flex layout column -->
+  <div fxLayout="column">
+    <p style="text-align: center; color: var(--ravenclaw-secondary);">
+      Visit us online or at one of our many great locations throughout the country!
+    </p>
   </div>
-</div>
-
-<br /><br /><br /><br />
-
-<!-- Footer text centered, contained within a flex layout column -->
-<div fxLayout="column">
-  <p style="text-align: center; color: var(--ravenclaw-secondary);">
-    Visit us online or at one of our many great locations throughout the country!
-  </p>
 </div>

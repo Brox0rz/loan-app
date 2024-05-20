@@ -92,16 +92,28 @@
  // Specific styles for the about card
  .about-card {
    padding: 20px;
-   background-color: var(--card-background); // Grey background for about card
+   background-color: var(--card-background);
    border-radius: 8px;
    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
    color: var(--ravenclaw-accent); // Text color
  }
 
+ // About container styling
+ .about-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+ }
+
+ // About content styling
+ .about-content {
+   width: 75%;
+ }
+
  // Contact cards styling
  .contact-card {
    padding: 20px;
-   background-color: var(--card-background); // Grey background for contact card
+   background-color: var(--card-background);
    border-radius: 8px;
    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
    color: var(--ravenclaw-accent); // Text color
@@ -113,4 +125,17 @@
    justify-content: center;
    align-items: center;
    width: 100%;
+ }
+
+ // CSS to remove up/down arrows from input type number
+ input[type="number"] {
+   appearance: textfield; // Standard property
+   -moz-appearance: textfield; // Firefox
+   -webkit-appearance: none; // Chrome, Safari, and Edge
+ }
+
+ input[type="number"]::-webkit-outer-spin-button,
+ input[type="number"]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
  }

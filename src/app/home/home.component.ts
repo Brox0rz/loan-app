@@ -6,14 +6,16 @@
  * Description: TypeScript file for the Home component of the Loan App, handling the loan calculation logic.
  */
 
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
+  @ViewChild('loanAmountInput') loanAmountInput!: ElementRef;
+
   loanDetails = {
     amount: 0,
     interestRate: 0,
@@ -37,5 +39,17 @@ export class HomeComponent {
 
     // Calculate the total interest paid over the loan term
     this.totalInterest = (this.monthlyPayment * n) - P;
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit called');
+    setTimeout(() => {
+      this.loanAmountInput.nativeElement.focus(); // autofocus on loan amount field upon page load
+    }, 0);
+  }
+
+  selectText(event: FocusEvent) {
+    const inputElement = event.target as HTMLInputElement; // highlights text in the field upon focus
+    inputElement.select();
   }
 }

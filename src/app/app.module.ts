@@ -2,13 +2,13 @@
  * Title: app.module.ts
  * Authors: Professor Richard Krasso and Brock Hemsouvanh
  * Date Created: 5/12/2024
- * Modified by Brock Hemsouvanh: 5/17/2024
+ * Modified by Brock Hemsouvanh: 5/19/2024
  * Description: Main module of the Loan App, handling the imports and declarations of components and modules used across the application.
  */
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';  // Import FormsModule
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BaseLayoutComponent } from './base-layout/base-layout.component';
@@ -23,6 +23,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
@@ -43,6 +44,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    BrowserAnimationsModule,
     FlexLayoutModule
   ],
   providers: [],

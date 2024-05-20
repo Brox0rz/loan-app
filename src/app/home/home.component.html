@@ -10,8 +10,9 @@
   <!-- Loan entry form card -->
   <div fxFlex="90" class="loan-form">
     <mat-card>
-      <mat-card-title style="color: var(--ravenclaw-secondary); text-align: center;">
+      <mat-card-title style="color: var(--ravenclaw-secondary); font-weight: bold; text-align: center;">
         Welcome to the Loan Application!
+        <br /><br />
       </mat-card-title>
       <mat-card-content fxLayout="row" fxLayoutGap="20px">
         <!-- Form Section -->
@@ -19,17 +20,17 @@
           <!-- Input for Loan Amount -->
           <mat-form-field appearance="fill">
             <mat-label>Loan Amount</mat-label>
-            <input matInput id="txtLoanAmount" [(ngModel)]="loanDetails.amount" name="txtLoanAmount" type="number">
+            <input matInput id="txtLoanAmount" [(ngModel)]="loanDetails.amount" name="txtLoanAmount" type="number" class="no-arrows" (focus)="selectText($event)" #loanAmountInput>
           </mat-form-field>
           <!-- Input for Interest Rate -->
           <mat-form-field appearance="fill">
             <mat-label>Interest Rate (%)</mat-label>
-            <input matInput id="txtInterestRate" [(ngModel)]="loanDetails.interestRate" name="txtInterestRate" type="number" step="0.01">
+            <input matInput id="txtInterestRate" [(ngModel)]="loanDetails.interestRate" name="txtInterestRate" type="number" step="0.01" class="no-arrows" (focus)="selectText($event)">
           </mat-form-field>
           <!-- Input for Number of Years -->
           <mat-form-field appearance="fill">
             <mat-label>Number of Years</mat-label>
-            <input matInput id="txtYears" [(ngModel)]="loanDetails.years" name="txtYears" type="number">
+            <input matInput id="txtYears" [(ngModel)]="loanDetails.years" name="txtYears" type="number" class="no-arrows" (focus)="selectText($event)">
           </mat-form-field>
           <!-- Calculate button -->
           <button mat-raised-button class="calculate-button" (click)="calculateLoan()">Calculate</button>
